@@ -4,7 +4,9 @@
   "author": "Steve Papas <sp@stevepapa.com>",
   "description": "A lightweight Node.js blogging platform.",
   "scripts": {
-    "start": "node ./index"
+    "start": "node ./index",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "express": "~4.0.0",
@@ -23,11 +25,13 @@
     "sqlite3": "^2.2.3",
     "passport": "^0.2.0",
     "passport-local": "^1.0.0",
-    "marked": "^0.3.2"
+    "marked": "^0.3.2",
+    "snyk": "^1.316.1"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/stevepapa/veria.git"
-  }
+  },
+  "snyk": true
 }
